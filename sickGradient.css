@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* fills up 100% of the height space with the content and color background, etc */
+  width: 100%; /* same as height, but with width */
+  background: linear-gradient(45deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff); /* defines a background gradient (crazy, right?) */
+  background-size: 400% 400%; /* control dimensions of how the background gets repeated on the screen in the event that the screen is too big to render whatever the background is */
+  animation: gradientMove 12s ease infinite; /* create an animation named gradientMove. 12s = How fast it takes to complete the animation; ease = ease into animation; infinite = repeat animation ad infinitum */
+}
+
+.exciting-font {
+  text-align: center;
+  font: 'Arial Black';
+  font-weight: 900;
+  font-size: 64px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between; /* left and right */
+  align-items: center;            /* vertical middle */
+  margin-top: 60px;
+  padding: 0 300px;                /* optional spacing from edges */
+}
+
+.left-block, .right-block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-option, .right-option {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.left-image, .right-image {
+  width: 200px;
+  height: auto;
+  margin-top: 10%;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
